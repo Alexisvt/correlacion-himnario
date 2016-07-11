@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+    <StackLayout>
+        <Label text="Lista de todas las correlaciones" textWrap="true" />
+        <ListView items="{{ correlations }}">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <Label text="{{ 'Nombre del himno: ' + name }}" textWrap="true" />
+                    <GridLayout rows="auto" columns="auto, auto">
+                        <Label text="{{ '# antiguo: ' + oldNum }}" col="0" textWrap="true" />
+                        <Label text="{{ '# nuevo: ' + newNum }}" col="1" textWrap="true" />
+                    </GridLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
