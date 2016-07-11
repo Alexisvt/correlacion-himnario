@@ -11,7 +11,6 @@ export function showAllCorrelations(): Promise<Correlation[]> {
 
   return CORRELATIONS_FILE.readText()
     .then(function onFulfilled(content: string) {
-      console.log(typeof content);
       try {
         jsonData = <Array<Correlation>>JSON.parse(content);
       } catch (error) {
