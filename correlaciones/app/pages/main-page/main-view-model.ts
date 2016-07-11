@@ -3,8 +3,8 @@ import { Observable } from 'data/observable';
 export default class MainViewModel extends Observable {
 
   himnName = '';
-  himnOldNum = 0;
-  himnNewNum = 0;
+  oldNum = 0;
+  newNum = 0;
 
   constructor() {
     super();

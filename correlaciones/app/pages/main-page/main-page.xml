@@ -6,11 +6,11 @@
     <GridLayout rows="auto, auto" columns="auto, auto">
       <StackLayout col="0" row="0">
         <Label text="# himno antiguo" textWrap="true" />
-        <TextField hint="" text="{{ himnOldNum }}" />
+        <TextField hint="" text="{{ oldNum }}"  keyboardType="number" />
       </StackLayout>
       <StackLayout col="1" row="0">
         <Label text="# himno nuevo" textWrap="true" />
-        <TextField hint="" text="{{ himnNewNum }}" />
+        <TextField hint="" text="{{ newNum }}" keyboardType="number" />
       </StackLayout>
       <StackLayout row="1" colSpan="2">
         <Button text="Buscar correlacion" tap="{{searchTap}}" id="searchBtn" />
