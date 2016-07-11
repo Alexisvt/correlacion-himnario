@@ -13,7 +13,7 @@
         <TextField hint="" text="{{ newNum }}" keyboardType="number" />
       </StackLayout>
       <StackLayout row="1" colSpan="2">
-        <Button text="Buscar correlacion" tap="{{searchTap}}" id="searchBtn" />
+        <Button text="Buscar correlacion" tap="{{searchCorrelation}}" id="searchBtn" />
       </StackLayout>
     </GridLayout>
   </StackLayout>

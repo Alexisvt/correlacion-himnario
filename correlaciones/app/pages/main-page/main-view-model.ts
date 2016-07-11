@@ -1,4 +1,5 @@
 import { Observable } from 'data/observable';
+import { searchByOldNumber } from '../../services/correlation-service';
 
 export default class MainViewModel extends Observable {
 
@@ -10,7 +11,7 @@ export default class MainViewModel extends Observable {
     super();
   }
 
-  searchTap(): void {
+  searchCorrelation(): void {
     console.log('searching');
   }
 }

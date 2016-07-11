@@ -24,3 +24,25 @@ export function showAllCorrelations(): Promise<Correlation[]> {
     });
 }
 
+export function searchByOldNumber(oldHimnNumber: number): Promise<Correlation> {
+  return showAllCorrelations().then((correlationList: Correlation[]) => {
+    let himn = correlationList.filter((correlation: Correlation) => correlation.oldNum === oldHimnNumber);
+    if (himn !== null && himn.length > 0) {
+      return Promise.resolve(<Correlation>himn[0]);
+    } else {
+      return Promise.reject(`Couldn't find the correlation with that number please try another one`);
+    }
+  });
+}
+
+export function searchByNewNumber(newHimnNumber: number): Promise<Correlation> {
+  return showAllCorrelations().then((correlationList: Correlation[]) => {
+    let himn = correlationList.filter((correlation: Correlation) => correlation.newNum === newHimnNumber);
+    if (himn !== null && himn.length > 0) {
+      return Promise.resolve(<Correlation>himn[0]);
+    } else {
+      return Promise.reject(`Couldn't find the correlation with that number please try another one`);
+    }
+  });
+}
+
