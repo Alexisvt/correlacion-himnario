@@ -3,18 +3,19 @@
   <StackLayout>
     <Label text="Titulo del himno" textWrap="true" />
     <TextField hint="Titulo del himno" text="{{ himnName }}" />
-    <GridLayout rows="auto, auto" columns="auto, auto">
+    <GridLayout rows="auto, auto" columns="*, *">
       <StackLayout col="0" row="0">
         <Label text="# himno antiguo" textWrap="true" />
-        <TextField hint="" text="{{ oldNum }}"  keyboardType="number" />
+        <TextField hint="" text="{{ oldNum }}" keyboardType="number" id="txtOld" />
       </StackLayout>
       <StackLayout col="1" row="0">
         <Label text="# himno nuevo" textWrap="true" />
-        <TextField hint="" text="{{ newNum }}" keyboardType="number" />
+        <TextField hint="" text="{{ newNum }}" keyboardType="number" id="txtNew" />
       </StackLayout>
-      <StackLayout row="1" colSpan="2">
-        <Button text="Buscar correlacion" tap="{{searchCorrelation}}" id="searchBtn" />
-      </StackLayout>
+      <GridLayout row="1" colSpan="2" rows="auto" columns="*, *">
+        <Switch checked="{{ searchByNewHimn }}" col="0" />
+        <Button text="Limpiar" tap="{{cleanSearchFields}}" cssClass="btn" col="1"/>
+      </GridLayout>
     </GridLayout>
   </StackLayout>
 </Page>
