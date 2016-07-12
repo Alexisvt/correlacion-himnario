@@ -1,7 +1,6 @@
 import { Correlation } from '../shared';
 import * as FSModule from 'file-system';
 
-
 const DOCUMENTS = FSModule.knownFolders.currentApp();
 const CORRELATIONS_FILE = DOCUMENTS.getFile('data/correlations-es.json');
 
@@ -27,6 +26,7 @@ export function showAllCorrelations(): Promise<Correlation[]> {
 export function searchByOldNumber(oldHimnNumber: number): Promise<Correlation> {
   return showAllCorrelations().then((correlationList: Correlation[]) => {
     let himn = correlationList.filter((correlation: Correlation) => correlation.oldNum === oldHimnNumber);
+    console.log('Data of himn: ' + himn);
     if (himn !== null && himn.length > 0) {
       return Promise.resolve(<Correlation>himn[0]);
     } else {
