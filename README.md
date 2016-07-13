@@ -17,6 +17,7 @@ El programa poseera la siguintes funcionalidades:
 ## TODO
 
 Lista de caracteristicas futuras y tareas por hacer:
-- Feature: Agregar pagina para ver todas los himnos y sus respectivos numeros correlacionados
-  - Agregar funcionalidad para poder buscar de acuerdo al nombre del himno y que muestre lo filtrado.
-- TODO: Agregar valor por defecto a las cajas de texto de los numeros para que no esten vacios.
+- [ ] Agregar p\u00e1gina para ver todas los himnos y sus respectivos n\u00fameros correlacionados
+- [ ] Agregar funcionalidad para poder buscar de acuerdo al nombre del himno y que muestre lo filtrado.
+- [x] Agregar valor por defecto a las cajas de texto de los n\u00fameros para que no esten vacios.
+- [ ] Habilitar busqueda por nombre en la p\u00e1gina principal
