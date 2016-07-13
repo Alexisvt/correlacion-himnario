@@ -22,3 +22,4 @@ Lista de caracteristicas futuras y tareas por hacer:
 - [x] Agregar valor por defecto a las cajas de texto de los números para que no esten vacios.
 - [ ] Habilitar búsqueda por nombre en la página principal
 - [ ] Implementar función para envio de errores
+- [ ] Mejor el metodo de limpieza en las cajas de texto de los números
