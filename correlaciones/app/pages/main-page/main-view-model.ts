@@ -16,10 +16,6 @@ export default class MainViewModel extends Observable {
     super();
   }
 
-  searchCorrelation(): void {
-
-  }
-
   // getter and setter
 
   public get himnName(): string {
@@ -75,7 +71,6 @@ export default class MainViewModel extends Observable {
   cleanNumField(args: GestureEventData): void {
 
     let textField = <TextField>args.view;
-    console.log(textField.id);
     
     if (textField.id && textField.id === 'txtOld') {
       this.oldHimnNum = '';
