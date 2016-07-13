@@ -10,12 +10,12 @@
     "newNum": 2
   },
   {
-    "name": "¡Santo! ¡Santo! ¡Santo! Tu gloria llena",
+    "name": "\u00a1Santo! \u00a1Santo! \u00a1Santo! Tu gloria llena",
     "oldNum": 3,
     "newNum": 60
   },
   {
-    "name": "¡Alabadle!",
+    "name": "\u00a1Alabadle!",
     "oldNum": 4,
     "newNum": 141
   },
@@ -55,7 +55,7 @@
     "newNum": 3
   },
   {
-    "name": "¡Tu nombre es dulce, buen Jes\u00fas!",
+    "name": "\u00a1Tu nombre es dulce, buen Jes\u00fas!",
     "oldNum": 12,
     "newNum": 128
   },
@@ -70,12 +70,12 @@
     "newNum": 156
   },
   {
-    "name": "¡Suenen dulces himnos!",
+    "name": "\u00a1Suenen dulces himnos!",
     "oldNum": 18,
     "newNum": 8
   },
   {
-    "name": "Lo\u00e1moste, ¡oh Dios!",
+    "name": "Lo\u00e1moste, \u00a1oh Dios!",
     "oldNum": 19,
     "newNum": 15
   },
@@ -95,7 +95,7 @@
     "newNum": 17
   },
   {
-    "name": "¡Oh Pastor divino, escucha!",
+    "name": "\u00a1Oh Pastor divino, escucha!",
     "oldNum": 27,
     "newNum": 27
   },
@@ -145,7 +145,7 @@
     "newNum": 471
   },
   {
-    "name": "Oh Dios, si he ofendido un corazón",
+    "name": "Oh Dios, si he ofendido un coraz\u00f3n",
     "oldNum": 43,
     "newNum": 48
   },
@@ -175,7 +175,7 @@
     "newNum": 44
   },
   {
-    "name": "¡Oh, Dios, que oyes cada oración!",
+    "name": "\u00a1Oh, Dios, que oyes cada oraci\u00f3n!",
     "oldNum": 52,
     "newNum": 36
   },
@@ -195,7 +195,7 @@
     "newNum": 22
   },
   {
-    "name": "¡Hosanna!",
+    "name": "\u00a1Hosanna!",
     "oldNum": 60,
     "newNum": 6
   },
@@ -205,7 +205,7 @@
     "newNum": 58
   },
   {
-    "name": "¡Oh amor de Dios!",
+    "name": "\u00a1Oh amor de Dios!",
     "oldNum": 62,
     "newNum": 53
   },
@@ -233,5 +233,285 @@
     "name": "Eterno Dios, mi creador",
     "oldNum": 72,
     "newNum": 76
+  },
+  {
+    "name": "A ti, glorioso Dios",
+    "oldNum": 74,
+    "newNum": 5
+  },
+  {
+    "name": "Yo canto el poder de Dios",
+    "oldNum": 77,
+    "newNum": 64
+  },
+  {
+    "name": "El mundo es de mi Dios",
+    "oldNum": 78,
+    "newNum": 65
+  },
+  {
+    "name": "\u00bfSabes cu\u00e1ntos?",
+    "oldNum": 80,
+    "newNum": 66
+  },
+  {
+    "name": "\u00a1Se\u00f1or, yo te conozco!",
+    "oldNum": 81,
+    "newNum": 67
+  },
+  {
+    "name": "\u00a1Al mundo paz!",
+    "oldNum": 83,
+    "newNum": 78
+  },
+  {
+    "name": "Se oye un canto en alta esfera",
+    "oldNum": 84,
+    "newNum": 79
+  },
+  {
+    "name": "Venid, pastorcillos",
+    "oldNum": 85,
+    "newNum": 80
+  },
+  {
+    "name": "Noche de paz",
+    "oldNum": 87,
+    "newNum": 81
+  },
+  {
+    "name": "Hubo Uno que quiso",
+    "oldNum": 90,
+    "newNum": 93
+  },
+  {
+    "name": "Al contemplar la excelsa cruz",
+    "oldNum": 91,
+    "newNum": 96
+  },
+  {
+    "name": "Jam\u00e1s podr\u00e1 alguien separarnos",
+    "oldNum": 92,
+    "newNum": 99
+  },
+  {
+    "name": "Sangr\u00f3 mi soberano Dios",
+    "oldNum": 93,
+    "newNum": 94
+  },
+  {
+    "name": "Un d\u00eda",
+    "oldNum": 94,
+    "newNum": 95
+  },
+  {
+    "name": "Rostro divino",
+    "oldNum": 95,
+    "newNum": 98
+  },
+  {
+    "name": "En el monte Calvario",
+    "oldNum": 96,
+    "newNum": 97
+  },
+  {
+    "name": "\u00a1Dulces momentos!",
+    "oldNum": 99,
+    "newNum": 100
+  },
+  {
+    "name": "La tumba le encerr\u00f3",
+    "oldNum": 102,
+    "newNum": 104
+  },
+  {
+    "name": "Cristo ha resucitado",
+    "oldNum": 104,
+    "newNum": 105
+  },
+  {
+    "name": "\u00bfLe importar\u00e1 a Jes\u00fas?",
+    "oldNum": 105,
+    "newNum": 391
+  },
+  {
+    "name": "Amor que no me dejar\u00e1s",
+    "oldNum": 107,
+    "newNum": 113
+  },
+  {
+    "name": "Amigo fiel es Cristo",
+    "oldNum": 109,
+    "newNum": 108
+  },
+  {
+    "name": "Ama el Pastor sus ovejas",
+    "oldNum": 110,
+    "newNum": 124
+  },
+  {
+    "name": "Ni en la tierra",
+    "oldNum": 111,
+    "newNum": 146
+  },
+  {
+    "name": "Dime la antigua historia",
+    "oldNum": 112,
+    "newNum": 114
+  },
+  {
+    "name": "Un buen amigo tengo yo",
+    "oldNum": 114,
+    "newNum": 109
+  },
+  {
+    "name": "Muy cerca de mi Rendentor",
+    "oldNum": 115,
+    "newNum": 407
+  },
+  {
+    "name": "Hay quien vela mis pisadas",
+    "oldNum": 116,
+    "newNum": 392
+  },
+  {
+    "name": "Cristo es el mejor amigo",
+    "oldNum": 119,
+    "newNum": 110
+  },
+  {
+    "name": "Fija tus ojos en Cristo",
+    "oldNum": 120,
+    "newNum": 211
+  },
+  {
+    "name": "Me dice el Salvador",
+    "oldNum": 123,
+    "newNum": 284
+  },
+  {
+    "name": "La tierna voz del Salvador",
+    "oldNum": 124,
+    "newNum": 139
+  },
+  {
+    "name": "Abrigadas y salvas en el redil",
+    "oldNum": 125,
+    "newNum": 126
+  },
+  {
+    "name": "Como Jes\u00fas no hay otro amigo",
+    "oldNum": 127,
+    "newNum": 111
+  },
+  {
+    "name": "Huye cual ave",
+    "oldNum": 128,
+    "newNum": 210
+  },
+  {
+    "name": "Canto el gran amor",
+    "oldNum": 129,
+    "newNum": 107
+  },
+  {
+    "name": "En Cristo hallo amigo",
+    "oldNum": 131,
+    "newNum": 366
+  },
+  {
+    "name": "Cuando est\u00e9s cansado y abatido",
+    "oldNum": 133,
+    "newNum": 118
+  },
+  {
+    "name": "Es Jesucristo la vida, la luz",
+    "oldNum": 135,
+    "newNum": 121
+  },
+  {
+    "name": "Cual mirra fragante",
+    "oldNum": 137,
+    "newNum": 134
+  },
+  {
+    "name": "Cual Jes\u00fas no hay otro nombre",
+    "oldNum": 139,
+    "newNum": 129
+  },
+  {
+    "name": "A Dios sea gloria",
+    "oldNum": 141,
+    "newNum": 147
+  },
+  {
+    "name": "Te quiero, te quiero",
+    "oldNum": 144,
+    "newNum": 140
+  },
+  {
+    "name": "De Jes\u00fas el nombre invoca",
+    "oldNum": 145,
+    "newNum": 137
+  },
+  {
+    "name": "Junto a la cruz do Jes\u00fas muri\u00f3",
+    "oldNum": 146,
+    "newNum": 149
+  },
+  {
+    "name": "\u00a1Oh qu\u00e9 Salvador!",
+    "oldNum": 147,
+    "newNum": 396
+  },
+  {
+    "name": "A Cristo doy mi canto",
+    "oldNum": 149,
+    "newNum": 150
+  },
+  {
+    "name": "Hay una fuente sin igual",
+    "oldNum": 152,
+    "newNum": 286
+  },
+  {
+    "name": "Oh buen Se\u00f1or, velada est\u00e1",
+    "oldNum": 153,
+    "newNum": 397
+  },
+  {
+    "name": "Con acentos de alegr\u00eda",
+    "oldNum": 154,
+    "newNum": 145
+  },
+  {
+    "name": "Cristo, eres justo Rey",
+    "oldNum": 155,
+    "newNum": 487
+  },
+  {
+    "name": "Venid, cantad de gozo en plenitud",
+    "oldNum": 156,
+    "newNum": 142
+  },
+  {
+    "name": "Dad gloria al Cordero Rey",
+    "oldNum": 158,
+    "newNum": 154
+  },
+  {
+    "name": "Amanece ya la ma\u00f1ana de oro",
+    "oldNum": 161,
+    "newNum": 158
+  },
+  {
+    "name": "Viene otra vez nuestro Salvador",
+    "oldNum": 162,
+    "newNum": 160
+  },
+  {
+    "name": "\u00a1Oh! Cu\u00e1n gratas las nuevas",
+    "oldNum": 163,
+    "newNum": 161
   }
 ]
