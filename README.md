@@ -21,3 +21,4 @@ Lista de caracteristicas futuras y tareas por hacer:
 - [ ] Agregar funcionalidad para poder buscar de acuerdo al nombre del himno y que muestre lo filtrado.
 - [x] Agregar valor por defecto a las cajas de texto de los números para que no esten vacios.
 - [ ] Habilitar búsqueda por nombre en la página principal
+- [ ] Implementar función para envio de errores
