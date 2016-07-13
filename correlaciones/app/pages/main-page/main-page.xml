@@ -2,20 +2,20 @@
   xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
   <StackLayout>
     <Label text="Titulo del himno" textWrap="true" />
-    <TextField hint="Titulo del himno" text="{{ himnName }}" />
+    <TextField hint="Titulo del himno" text="{{ himnName }}" isEnabled="false" />
     <GridLayout rows="auto, auto" columns="*, *">
       <StackLayout col="0" row="0">
         <Label text="# himno antiguo" textWrap="true" />
-        <TextField hint="" text="{{ oldNum }}" keyboardType="number" id="txtOld" />
+        <TextField hint="" text="{{ oldHimnNum }}" keyboardType="number" id="txtOld" isEnabled="{{!enableSearchBynewHimnNum}}" tap="{{cleanNumField}}"/>
       </StackLayout>
       <StackLayout col="1" row="0">
         <Label text="# himno nuevo" textWrap="true" />
-        <TextField hint="" text="{{ newNum }}" keyboardType="number" id="txtNew" />
+        <TextField hint="" text="{{ newHimnNum }}" keyboardType="number" id="txtNew" isEnabled="{{enableSearchBynewHimnNum}}" tap="{{cleanNumField}}"/>
       </StackLayout>
-      <GridLayout row="1" colSpan="2" rows="auto" columns="*, *">
-        <Switch checked="{{ searchByNewHimn }}" col="0" />
-        <Button text="Limpiar" tap="{{cleanSearchFields}}" cssClass="btn" col="1"/>
-      </GridLayout>
+      <StackLayout orientation="horizontal" row="1" colSpan="2">
+        <Label text="Buscar con el campo de himno nuevo" textWrap="true" col="0" />
+        <Switch checked="{{ enableSearchBynewHimnNum }}" col="1" id="switchSearch" />
+      </StackLayout>
     </GridLayout>
   </StackLayout>
 </Page>
