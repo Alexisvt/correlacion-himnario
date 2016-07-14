@@ -11,12 +11,21 @@ export default class MainViewModel extends Observable {
   private _oldHimnNum: number | string = 0;
   private _newHimnNum: number | string = 0;
   private _enableSearchBynewHimnNum = false;
+  private _appTitle: string = `Correlación entre Himnarios Adventistas`;
 
   constructor() {
     super();
   }
 
   // getter and setter
+  
+  public get appTitle() : string {
+    return this._appTitle;
+  }
+  
+  public set appTitle(v : string) {
+    this._appTitle = v;
+  }
 
   public get himnName(): string {
     return this._himnName;
@@ -71,7 +80,7 @@ export default class MainViewModel extends Observable {
   cleanNumField(args: GestureEventData): void {
 
     let textField = <TextField>args.view;
-    
+
     if (textField.id && textField.id === 'txtOld') {
       this.oldHimnNum = '';
     } else if (textField.id && textField.id === 'txtNew') {
@@ -104,13 +113,7 @@ export default class MainViewModel extends Observable {
         },
         (message: any) => {
 
-          alert(<AlertOptions>{
-            title: 'No se encontr\u00f3',
-            message: message,
-            okButtonText: 'ok'
-          }).then(() => {
-            this.cleanSearchFields();
-          });
+          this.himnName = <string>message;
 
         });
 
@@ -129,13 +132,7 @@ export default class MainViewModel extends Observable {
         },
         (message: any) => {
 
-          alert(<AlertOptions>{
-            title: 'No se encontr\u00f3',
-            message: message,
-            okButtonText: 'ok'
-          }).then(() => {
-            this.cleanSearchFields();
-          });
+          this.himnName = <string>message;
 
         });
 
