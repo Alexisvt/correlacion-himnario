@@ -5,7 +5,7 @@ import * as _ from 'lodash';
 
 const DOCUMENTS = FSModule.knownFolders.currentApp();
 const CORRELATIONS_FILE = DOCUMENTS.getFile('data/correlations-es.json');
-const ERROR_NUMBER_IS_NOT_FOUND = `No se encontr\u00f3 un himno asociado a ese n\u00famero, por favor, trate con otro`;
+const ERROR_NUMBER_IS_NOT_FOUND = `No se encontr\u00f3 una correlaci\u00f3n`;
 
 export function showAllCorrelations(): Promise<Correlation[]> {
 
