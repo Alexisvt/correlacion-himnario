@@ -1,4 +1,4 @@
-# Correlacion de Himnarion Adventista
+# Correlacion de Himnario Adventista
 
 Este proyecto es una aplicacion hecha con **nativescript** enfocada a solucionar un
 problema muy comun en nuestras iglesias y es el de tener una aplicacion que nos facilite
