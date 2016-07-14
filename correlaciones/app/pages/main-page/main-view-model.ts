@@ -114,6 +114,7 @@ export default class MainViewModel extends Observable {
         (message: any) => {
 
           this.himnName = <string>message;
+          this.newHimnNum = 0;
 
         });
 
@@ -133,6 +134,7 @@ export default class MainViewModel extends Observable {
         (message: any) => {
 
           this.himnName = <string>message;
+          this.oldHimnNum = 0;
 
         });
 
