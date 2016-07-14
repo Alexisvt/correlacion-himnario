@@ -12,7 +12,7 @@
         <TextField hint="" text="{{ newHimnNum }}" keyboardType="number" id="txtNew" isEnabled="{{enableSearchBynewHimnNum}}" tap="{{cleanNumField}}"/>
       </StackLayout>
       <StackLayout orientation="horizontal" row="1" colSpan="2">
-        <Label text="User versión nueva" textWrap="true" col="0" />
+        <Label text="Usar versión nueva" textWrap="true" col="0" />
         <Switch checked="{{ enableSearchBynewHimnNum }}" col="1" id="switchSearch" />
       </StackLayout>
     </GridLayout>
