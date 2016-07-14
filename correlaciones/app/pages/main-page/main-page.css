@@ -5,6 +5,7 @@ stacklayout label, stacklayout textfield {
 #mainTitle {
   font-size: 20;
   margin-bottom: 20;
+  padding: 0 10;
 }
 
 #himnTitleGroup label {
