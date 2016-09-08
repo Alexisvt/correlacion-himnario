@@ -1,7 +1,20 @@
 <Page 
-  xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+  xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" 
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer">
+  <drawer:RadSideDrawer id="SideDrawer">
+    <drawer:RadSideDrawer.drawerTransition>
+      <drawer:SlideInOnTopTransition/>
+    </drawer:RadSideDrawer.drawerTransition>
+    <drawer:RadSideDrawer.drawerContent>
+    <GridLayout rows="*, auto">
+        <StackLayout>
+            <Button text="Ver todos los Himnos" tap="selectView" />
+        </StackLayout>
+    </GridLayout>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
   <StackLayout>
-    <Label text="{{appTitle}}" textWrap="true" id="mainTitle"  />
+    <Label text="{{appTitle}}" textWrap="true" id="mainTitle" />
     <GridLayout rows="auto, auto" columns="*, *">
       <StackLayout col="0" row="0">
         <Label text="Versión antigua" textWrap="true" />

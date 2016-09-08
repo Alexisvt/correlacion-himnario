@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "lodash": "^4.13.1",
+    "nativescript-telerik-ui": "^1.2.0",
     "tns-core-modules": "2.1.0"
   },
   "devDependencies": {
