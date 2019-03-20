@@ -11,7 +11,7 @@ class CorrelacionBloc extends Bloc<EventBase, StateBase> {
   CorrelacionBloc({@required this.repository}) : assert(repository != null);
 
   @override
-  StateBase get initialState => new StateBase();
+  StateBase get initialState => Init();
 
   @override
   Stream<StateBase> mapEventToState(

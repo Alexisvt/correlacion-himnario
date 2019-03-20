@@ -6,6 +6,8 @@ class StateBase extends Equatable {
   StateBase([List props = const []]) : super(props);
 }
 
+class Init extends StateBase {}
+
 class Loading extends StateBase {}
 
 class Loaded extends StateBase {

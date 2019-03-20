@@ -5,8 +5,6 @@ abstract class EventBase extends Equatable {
   EventBase([List props = const []]) : super(props);
 }
 
-class Init extends EventBase {}
-
 class SearchHymnByName extends EventBase {
   final String hymnName;
   SearchHymnByName({@required this.hymnName})
