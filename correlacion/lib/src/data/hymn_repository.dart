@@ -32,4 +32,17 @@ class HymnRepository {
     }
     return hymn;
   }
+
+  Future<HymnModel> getHymnByName(String name) async {
+    HymnModel hymn;
+
+    try {
+      hymn = await dataProvider.getHymnByName(name);
+    } catch (e) {
+      print(e);
+      rethrow;
+    }
+
+    return hymn;
+  }
 }
