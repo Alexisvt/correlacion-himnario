@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -18,6 +20,11 @@ class CorrelacionBloc extends Bloc<EventBase, StateBase> {
     StateBase currentState,
     EventBase event,
   ) async* {
+    if (event is AppStarted) {
+      await Future.delayed(Duration(seconds: 3));
+      yield DisplayHome();
+    }
+
     if (event is SearchHymnByName) {
       yield Loading();
 

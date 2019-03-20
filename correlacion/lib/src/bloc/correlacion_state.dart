@@ -8,6 +8,8 @@ class StateBase extends Equatable {
 
 class Init extends StateBase {}
 
+class DisplayHome extends StateBase {}
+
 class Loading extends StateBase {}
 
 class Loaded extends StateBase {
