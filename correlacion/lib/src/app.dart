@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import './bloc/bloc.dart';
 import './data/data.dart';
-import './screens/screens.dart';
+import './presentation/presentation.dart';
 
 class App extends StatefulWidget {
   final HymnRepository repository;
