@@ -1,2 +1,2 @@
-export './pages/home.dart';
-export './pages/splash.dart';
+export './pages/pages.dart';
+export './widgets/widgets.dart';

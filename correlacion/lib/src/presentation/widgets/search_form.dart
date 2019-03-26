@@ -22,14 +22,14 @@ class SearchForm extends StatelessWidget {
         return Container(
           margin: EdgeInsets.all(20.0),
           child: Column(
-            children: <Widget>[hymnNameField()],
+            children: <Widget>[hymnNameField(bloc)],
           ),
         );
       },
     );
   }
 
-  Widget hymnNameField() {
+  Widget hymnNameField(CorrelacionBloc bloc) {
     return TextFormField(
       controller: _hymnNameController,
       decoration: InputDecoration(
@@ -44,6 +44,11 @@ class SearchForm extends StatelessWidget {
       },
       onSaved: (String value) {
         print(value);
+      },
+      onFieldSubmitted: (String value) {
+        bloc.dispatch(
+          SearchHymnByName(hymnName: value),
+        );
       },
     );
   }
