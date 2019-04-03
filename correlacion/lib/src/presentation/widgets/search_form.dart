@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/bloc.dart';
+import '../../data/data.dart';
+
+import './result.dart';
 
 typedef OnSearchByName = Function(String hymnName);
 
@@ -19,17 +22,29 @@ class SearchForm extends StatelessWidget {
     return BlocBuilder<EventBase, StateBase>(
       bloc: bloc,
       builder: (BuildContext context, StateBase state) {
+        HymnModel hymn = HymnModel(
+          name: 'Nombre del himno',
+          oldNum: 0,
+          newNum: 0,
+        );
+
+        if (state is Loaded) {
+          hymn = state.hymn;
+        }
         return Container(
           margin: EdgeInsets.all(20.0),
           child: Column(
-            children: <Widget>[hymnNameField(bloc)],
+            children: <Widget>[
+              hymnNameField(bloc),
+              ResultFormWidget(model: hymn),
+            ],
           ),
         );
       },
     );
   }
 
-  Widget hymnNameField(CorrelacionBloc bloc) {
+  Widget hymnNameField(CorrelacionBloc bloc, {HymnModel hymn}) {
     return TextFormField(
       controller: _hymnNameController,
       decoration: InputDecoration(

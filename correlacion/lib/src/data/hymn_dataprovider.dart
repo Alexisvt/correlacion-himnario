@@ -67,6 +67,13 @@ class HymnDataProvider {
     }
 
     final List<HymnModel> hymns = await loadHymns();
-    return hymns.singleWhere((hymn) => hymn.name.contains(hymnName));
+    return hymns.singleWhere(
+      (hymn) => hymn.name.contains(hymnName),
+      orElse: () => HymnModel(
+            name: '',
+            oldNum: 0,
+            newNum: 0,
+          ),
+    );
   }
 }

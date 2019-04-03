@@ -54,6 +54,10 @@ class _AppState extends State<App> {
             if (state is Loading) {
               return LoadingPage();
             }
+
+            if (state is Loaded) {
+              return HomeScreen();
+            }
           },
         ),
       ),

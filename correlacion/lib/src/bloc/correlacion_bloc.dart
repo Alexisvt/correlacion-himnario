@@ -30,6 +30,7 @@ class CorrelacionBloc extends Bloc<EventBase, StateBase> {
 
       try {
         final HymnModel hymn = await repository.getHymnByName(event.hymnName);
+
         yield Loaded(hymn: hymn);
       } catch (_) {
         yield Error(message: "something happened");
