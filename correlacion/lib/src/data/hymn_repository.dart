@@ -4,9 +4,7 @@ import './hymn_model.dart';
 import './hymn_dataprovider.dart';
 
 class HymnRepository {
-  final HymnDataProvider dataProvider;
-
-  HymnRepository({@required this.dataProvider}) : assert(dataProvider != null);
+  final HymnDataProvider dataProvider = HymnDataProvider();
 
   Future<HymnModel> getOldHymnByNumber(int hymnNumber) async {
     HymnModel hymn;

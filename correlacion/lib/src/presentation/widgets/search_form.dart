@@ -8,8 +8,7 @@ import './result.dart';
 
 typedef OnSearchByName = Function(String hymnName);
 
-class SearchForm extends StatelessWidget {
-  final TextEditingController _hymnNameController = TextEditingController();
+class SearchForm extends StatefulWidget {
   final OnSearchByName onSearchByName;
 
   SearchForm({Key key, @required this.onSearchByName})
@@ -17,52 +16,59 @@ class SearchForm extends StatelessWidget {
         super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final CorrelacionBloc bloc = BlocProvider.of(context);
-    return BlocBuilder<EventBase, StateBase>(
-      bloc: bloc,
-      builder: (BuildContext context, StateBase state) {
-        HymnModel hymn = HymnModel(
-          name: 'Nombre del himno',
-          oldNum: 0,
-          newNum: 0,
-        );
+  _SearchFormState createState() => _SearchFormState();
+}
 
-        if (state is Loaded) {
-          hymn = state.hymn;
-        }
-        return Container(
-          margin: EdgeInsets.all(20.0),
-          child: Column(
-            children: <Widget>[
-              hymnNameField(bloc),
-              ResultFormWidget(model: hymn),
-            ],
-          ),
-        );
-      },
+class _SearchFormState extends State<SearchForm> {
+  final TextEditingController _hymnNameController = TextEditingController();
+  CorrelacionBloc bloc;
+
+  @override
+  void didChangeDependencies() {
+    bloc = CorrelacionBlocProvider.of(context);
+    super.didChangeDependencies();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(20.0),
+      child: Column(
+        children: <Widget>[
+          searchByhymnNameField(),
+          _searchButton(),
+        ],
+      ),
     );
   }
 
-  Widget hymnNameField(CorrelacionBloc bloc, {HymnModel hymn}) {
-    return TextFormField(
-      controller: _hymnNameController,
-      decoration: InputDecoration(
-        hintText: "Buscar por nombre",
-        labelText: "Nombre del himno",
-      ),
-      autovalidate: true,
-      validator: (String value) {
-        if (value.isEmpty) {
-          return "El espacio del nombre del himno no puede ser vacio";
-        }
-      },
-      onSaved: (String value) {
-        print(value);
-      },
-      onFieldSubmitted: (String value) {
-        bloc.dispatch(
-          SearchHymnByName(hymnName: value),
+  Widget searchByhymnNameField() {
+    return StreamBuilder<String>(
+        stream: bloc.hymnName,
+        builder: (context, snapshot) {
+          return TextField(
+            controller: _hymnNameController,
+            onChanged: bloc.changeHymnNameSearch,
+            decoration: InputDecoration(
+                hintText: "Buscar por nombre",
+                labelText: "Nombre del himno",
+                errorText: snapshot.error),
+          );
+        });
+  }
+
+  Widget _searchButton() {
+    return StreamBuilder<bool>(
+      stream: bloc.submitValid,
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+        return RaisedButton(
+          child: Text('Buscar'),
+          color: Colors.blue,
+          onPressed: snapshot.hasData
+              ? () {
+                  // bloc.search();
+                }
+              : null,
         );
       },
     );

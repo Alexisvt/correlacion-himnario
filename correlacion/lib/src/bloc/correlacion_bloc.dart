@@ -1,66 +1,24 @@
-import 'dart:async';
+import 'package:rxdart/rxdart.dart';
+import '../data/data.dart' show HymnRepository, HymnModel;
+import './validators.dart';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+class CorrelacionBloc with ValidatorsMixin {
+  final HymnRepository repository = HymnRepository();
+  final BehaviorSubject<String> _hymnNameSearch = BehaviorSubject<String>();
+  final PublishSubject<HymnModel> _hymnModel = new PublishSubject<HymnModel>();
 
-import './correlacion_event.dart';
-import './correlacion_state.dart';
-import '../data/data.dart';
+  // add data to the stream
+  Stream<String> get hymnName =>
+      _hymnNameSearch.stream.transform(validateHymnName);
 
-class CorrelacionBloc extends Bloc<EventBase, StateBase> {
-  final HymnRepository repository;
+  Stream<bool> get submitValid => hymnName.map((hymnName) => true);
 
-  CorrelacionBloc({@required this.repository}) : assert(repository != null);
+// change data
+  Function(String) get changeHymnNameSearch => _hymnNameSearch.sink.add;
 
-  @override
-  StateBase get initialState => Init();
-
-  @override
-  Stream<StateBase> mapEventToState(
-    StateBase currentState,
-    EventBase event,
-  ) async* {
-    if (event is AppStarted) {
-      await Future.delayed(Duration(seconds: 3));
-      yield DisplayHome();
-    }
-
-    if (event is SearchHymnByName) {
-      yield Loading();
-
-      try {
-        final HymnModel hymn = await repository.getHymnByName(event.hymnName);
-
-        yield Loaded(hymn: hymn);
-      } catch (_) {
-        yield Error(message: "something happened");
-      }
-    }
-
-    if (event is SearchHymnByNewNum) {
-      yield Loading();
-
-      try {
-        final HymnModel hymn =
-            await repository.getNewHymnByNumber(event.hymnNumber);
-
-        yield Loaded(hymn: hymn);
-      } catch (_) {
-        yield Error(message: "something happened");
-      }
-    }
-
-    if (event is SearchHymnByOldNum) {
-      yield Loading();
-
-      try {
-        final HymnModel hymn =
-            await repository.getOldHymnByNumber(event.hymnNumber);
-
-        yield Loaded(hymn: hymn);
-      } catch (_) {
-        yield Error(message: "something happened");
-      }
-    }
+  void dispose() async {
+    await _hymnNameSearch.drain();
+    _hymnNameSearch.close();
+    _hymnModel.close();
   }
 }
