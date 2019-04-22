@@ -36,25 +36,50 @@ class _SearchFormState extends State<SearchForm> {
       child: Column(
         children: <Widget>[
           searchByhymnNameField(),
+          SizedBox(
+            height: 15,
+          ),
           _searchButton(),
+          buildStreamBuilderResult(),
         ],
       ),
     );
   }
 
+  StreamBuilder<HymnModel> buildStreamBuilderResult() {
+    return StreamBuilder<HymnModel>(
+      stream: bloc.hymnModel,
+      builder: (BuildContext context, AsyncSnapshot<HymnModel> snapshot) {
+        if (snapshot.hasData) {
+          // TODO: do something with the data
+          return ResultFormWidget(
+            model: snapshot.data,
+          );
+        } else if (snapshot.hasError) {
+          // TODO: do something with the error
+          return Text(snapshot.error.toString());
+        }
+        // TODO: the data is not ready, show a loading indicator
+        return Center(child: CircularProgressIndicator());
+      },
+    );
+  }
+
   Widget searchByhymnNameField() {
     return StreamBuilder<String>(
-        stream: bloc.hymnName,
-        builder: (context, snapshot) {
-          return TextField(
-            controller: _hymnNameController,
-            onChanged: bloc.changeHymnNameSearch,
-            decoration: InputDecoration(
-                hintText: "Buscar por nombre",
-                labelText: "Nombre del himno",
-                errorText: snapshot.error),
-          );
-        });
+      stream: bloc.hymnName,
+      builder: (context, snapshot) {
+        return TextField(
+          controller: _hymnNameController,
+          onChanged: bloc.changeHymnNameSearch,
+          decoration: InputDecoration(
+            hintText: "Buscar por nombre",
+            labelText: "Nombre del himno",
+            errorText: snapshot.error,
+          ),
+        );
+      },
+    );
   }
 
   Widget _searchButton() {
@@ -66,7 +91,7 @@ class _SearchFormState extends State<SearchForm> {
           color: Colors.blue,
           onPressed: snapshot.hasData
               ? () {
-                  // bloc.search();
+                  bloc.search();
                 }
               : null,
         );
